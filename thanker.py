@@ -26,7 +26,8 @@ def thank(cookie, tid):
 		"""
 		Max retries exceeded with url error...
 		"""
-        time.sleep(5)
+		time.sleep(5)
+		print 'pause a while...'
 		req.post(ROOT+thankPath, data={'id': tid}, cookies=cookie)
 def main():
 	"""
