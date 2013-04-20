@@ -56,5 +56,5 @@ def main():
 	logFile.write(log)
 	logFile.close()
 if __name__ == '__main__':
-	login()
+	#login()
 	main()
