@@ -5,10 +5,10 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 import requests as req
-import urllib, re, datetime
+import urllib, re, datetime, time
 
-USER = '*****'
-PWD = '*****'
+USER = '***'
+PWD = '***'
 
 ROOT = 'http://www.nexushd.org/'
 loginPath = 'takelogin.php'
@@ -26,6 +26,7 @@ def thank(cookie, tid):
 		"""
 		Max retries exceeded with url error...
 		"""
+        time.sleep(5)
 		req.post(ROOT+thankPath, data={'id': tid}, cookies=cookie)
 def main():
 	"""
